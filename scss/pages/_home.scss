@@ -1,0 +1,102 @@
+.home{
+  &__container{
+    //max-width: 1840px;
+  }
+  &__logo{
+    @include fluidx(144px,80px,height);
+  }
+  &__nhacai{
+    margin-top: -40px;
+    @include media-breakpoint-up('m'){
+      margin-top: -100px;
+
+    }
+  }
+  &__grid{
+    margin-top: -40px;
+    @include media-breakpoint-up('m'){
+      margin-top: -140px;
+
+    }
+  }
+  &__grid1{
+    @include media-breakpoint-up('m'){
+      margin-top: -70px;
+
+    }
+  }
+  &__width{
+    max-width: 980px;
+    width: 100%;
+    box-sizing: content-box;
+  }
+  &__card{
+    @include media-breakpoint-up('m'){
+      min-height: 631px;
+    }
+    position: relative;
+    padding: 20px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @include media-breakpoint-up('m'){
+      padding: 93px;
+      padding-top: 130px;
+    }
+    &__title{
+      top: 15px;
+      @include media-breakpoint-down('s'){
+        width: 50%;
+      }
+    }
+    &__btn{
+      background-color: transparent;
+      border-color: transparent;
+      bottom: -20px;
+      @include media-breakpoint-up('m'){
+        bottom: -65px;
+      }
+    }
+    $x:70px;
+    &__icon{
+      right: 20px;
+      @include media-breakpoint-up('m'){
+        right: #{$x};
+      }
+      color: #d49783;
+      &:hover{
+        color: #720000;
+      }
+      svg{
+        @include media-breakpoint-down('s'){
+          width: 20px;
+        }
+      }
+    }
+    &__input{
+      font-family: $font-Nexa-Bold;
+      //background-size: cover;
+      padding-left: 30px !important;
+      @include media-breakpoint-up('m'){
+        height: 83px !important;
+        background-size: contain;
+        padding: 0 80px !important;
+      }
+      background-color: transparent !important;
+      border-color: transparent !important;
+      //@extend .fz-28;
+      @include fluidx(28px,18px,font-size);
+      color: #720000 !important;
+      &::placeholder{
+        color: #d49783;
+      }
+    }
+    .uk-form-icon-flip{
+      & ~ .uk-input{
+        padding-right: calc(#{$x} - 10px) !important;
+        @include media-breakpoint-up('m'){
+          padding-right: calc(#{$x} + 40px) !important;
+        }
+      }
+    }
+  }
+}

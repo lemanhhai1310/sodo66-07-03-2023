@@ -9,7 +9,7 @@
     @include fluidx(base($i),scale_8(base($i)),font-size);
   }
 }
-$j: 14,15,16,20,30;
+$j: 14,15,16,20,28,30;
 @each $i in $j {
   .fz-#{$i}{
     @include font-size($i);
